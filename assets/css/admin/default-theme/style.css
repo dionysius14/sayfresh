@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 11, 2017, 7:39:44 PM
+    Author     : ozzisuria
+*/
+
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
+}
+#exTab3 .tab-content {
+    color : black;
+    border: solid 1px #428bca;
+    /*background-color: #428bca;*/
+    padding : 5px 15px;
+}
+
+.error{
+    font-style: italic;
+    color: red;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+.progress a{
+    color: white;
+}
+
+.matrix>tbody>tr>td, .matrix>tbody>tr>th, .matrix>tfoot>tr>td, .matrix>tfoot>tr>th, .matrix>thead>tr>td, .matrix>thead>tr>th{
+    padding: 0;
+}
+
+.title_404{
+    font-size: 100px;
+    margin-top: 0;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 2px 3px 3px #ffffff;
+    letter-spacing: 0px;
+    -webkit-text-stroke: 0px white;
+}
+.subtitle_404{
+    font-size: 20px;
+    margin-top: 0;
+    letter-spacing: -1px;
+}
