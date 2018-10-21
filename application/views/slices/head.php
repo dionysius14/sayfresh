@@ -39,7 +39,7 @@ echo add_js($folder . 'jquery.bxslider');
 echo add_js($folder . 'jquery.fancybox.min');
 ?>
 <link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Pacifico|Handlee|Parisienne|Sacramento|Yanone+Kaffeesatz|Raleway:400,500|Josefin+Sans" rel="stylesheet">
-
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <script type="text/javascript">
     
 </script>
