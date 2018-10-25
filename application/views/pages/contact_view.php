@@ -4,71 +4,70 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-us">
         <div class="container">
-            <div class="page-header">
-                <h1>Contact Us</h1>
-            </div>
-            <div class="sidebar">
-                <div class="location-sidebar"><span>Contact Us</span></div>
-                <div class="form-sidebar"><span>Contact Form</span></div>
-            </div>
-            <div class="content location">
-                <div>
-                    <div class="headoffice">
-                        <span>Head Office:</span>
-                        <p><?php echo $profile->headoffice ?> </p>
-                    </div>
-                    <div class="cities">
-                    <ul>
-                        <?php foreach($branch as $bc){ ?>
-                        <li>
-                            <p>
-                                <strong><?php echo $bc->branch_nama; ?></strong> 
-                                <div id="alamat"><?php echo $bc->branch_alamat; ?></div>
-                                <div id="map-wa">
-                                    <a target="blank" href="<?php echo "http://maps.google.com?q=".$bc->latitute.",".$bc->longitude.""; ?>" >
-                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/map.png ">
-                                    </a>
-                                    <a target="blank" href="<?php echo $bc->link_wa; ?>" >
-                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/whatsapp.png ">
-
-                                    </a>
-                                </div>
-                            </p>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                    </div>
-                </div>
-            </div>
             <div class="content form">
                 <div class="page-header">
-                    <h3>Contact Form</h3>
+                    <h1>Leave a Message</h1>
                 </div>
-                <p>Please enter your contact details and a short message below and I will try to answer your query as soon as possible.</p>
                 <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
                 <ul>
                     <li>
-                        <label>Name</label>
-                        <input type="text" id="kontak_nama" name="kontak_nama" required>
+                        <input type="text" id="kontak_nama" name="kontak_nama" placeholder="Name" required>
                     </li>
                     <li>
-                        <label>Email</label>
-                        <input type="email" id="kontak_email" name="kontak_email" required>
+                        <input type="email" id="kontak_email" name="kontak_email" placeholder="Email" required>
                     </li>
                     <li>
-                        <label>Phone</label>
-                        <input type="text" id="kontak_phone" name="kontak_phone" required>
+                        <input type="text" id="kontak_subject" name="kontak_subject" placeholder="Subject" required>
                     </li>
                     <li>
-                        <label>Message</label>
-                        <textarea rows="4" cols="50" id="kontak_keterangan" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
+                        <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Message" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
                     </li>
                     <div class="g-recaptcha" data-sitekey="6LcNYloUAAAAALbqUieM3LzBsYE56gpWPxEUeWdQ"></div>
                 </ul>
                 <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
                 <?php echo form_close(); ?> 
-                <div id="map"></div>
             </div>
+
+            <div class="content location">
+                <div class="page-header">
+                    <h1>Get in Touch</h1>
+                </div>
+                <div class="boxes headoffice">
+                    <div class="box">
+                        <i class="icon-map-marker"></i>
+                        <span>Our Location</span>
+                        <p>PO Box 1025MNO Collins Street West Victoria</p>
+                        <p>8007 New York</p>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box hours">
+                        <i class="icon-time"></i>
+                        <span>Business Hours</span>
+                        <p>Mon-Sat:9.00am to 8.00pm </p>
+                        <p>Sunday Closed</p>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box email">
+                        <i class="icon-envelope"></i>
+                        <span>Email Us</span>
+                        <p>support@domain.com</p>
+                        <p>faq@domain.com</p>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box call">
+                        <i class="icon-phone"></i>
+                        <span>Call Us</span>
+                        <p>+61-1234-567-980</p>
+                        <p>+61-1234-567-999</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="map"></div>
         </div> 
     </div>
 </div>
@@ -109,18 +108,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         google.maps.event.addDomListener(window, 'load', initMap);
     }
 
-</script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery(".location-sidebar").click(function() {
-            jQuery(".content.location").show();
-            jQuery(".content.form").hide();
-        });
-        jQuery(".form-sidebar").click(function() {
-            jQuery(".content.form").show();
-            jQuery(".content.location").hide();
-        });
-    });
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7sMs4pf-OWid7m8jPSrlcAMDzd2kOc6s&callback=initMap"

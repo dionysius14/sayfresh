@@ -20,7 +20,7 @@
       <div class="container">
         <div class="logo">
           <a href="<?php echo base_url(); ?>">
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\agriland_logo.png">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\sayfresh-logo.png">
           </a>
         </div>
         <div class="info">
@@ -56,8 +56,22 @@
         </div> -->
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
+           <li class="list-menu about">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">About</a>
            <li class="list-menu category">
               <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Catalog</a>
+           </li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">News</a>
+           </li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("howto"); ?>">How to Order</a>
+           </li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("faq"); ?>">FAQ</a>
+           </li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a>
            </li>
         </ul>
         <div class="download">

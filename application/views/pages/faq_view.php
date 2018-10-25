@@ -8,13 +8,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 	</div>
 	<div class="item">
-	<?php foreach($faq as $fq){?>
-						<div class="text">
-							<span>
-								Pertanyaan : <?php echo $fq->faq_ask; ?><br/>
-								Jawaban :<?php echo $fq->faq_answer; ?><br/><br/>
-							</span>
-						</div>
-				<?php } ?>
+		<?php foreach($faq as $fq){?>
+				<div class="text">
+					<h2><?php echo $fq->faq_ask; ?></h2>
+					<p>
+						<?php echo $fq->faq_answer; ?>
+					</p>
+				</div>
+		<?php } ?>
 	</div>
 </div>
