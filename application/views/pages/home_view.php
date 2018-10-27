@@ -24,14 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="why">
 			<div class="container">
-				<h1>Why Choose Agriland?</h1>
+				<h1>Why Choose Sayfresh?</h1>
 					<div class="side">
 						<ul>
 							<li>
 								<div class="icon">
 									<img src="<?php echo base_url(); ?>\assets\css\public\default\img\homepage\leaf.png">
 								</div>
-								<h2 style=" color: ;">Quality Matters</h2>
+								<h2 style=" color: ;">Quality</h2>
 								<div class="smue-service-box-content-section">
 									<p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, type specimen book.</p>
 								</div>
@@ -81,15 +81,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div class="image" style="background-image: url(<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>)">
 						</div>
 						<a href="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
-							<div class="button">Order Now</div>
+							<!--div class="button">Order Now</div-->
 						</a>
 						<div class="text">
 							<div class="prod-name">
 								<h4><?php echo $dtl->nama; ?></h4>
 							</div>
 							<div class="prod-price">
-								<span class="old"><del>$300</del></span>
-								<span class="final">$200</span>
+							<?php if($dtl->harga_jual > 0 ){ ?>
+								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') . '</b>' ?></del></span>
+								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') . '</b>'?></span>
+							<?php }else{ ?>
+								<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') . '</b>' ?></span>
+							<?php } ?>
 							</div>
 						</div>
 					</div>

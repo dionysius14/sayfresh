@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  	</div>
 		</div>
 		<div class="side">
-		  	<h1>Agriland Tour</h1>
+		  	<h1>Sayfresh</h1>
 			<div class="image" style="background-image: url(https://demos.sitepad.com/AGRILAND/images/tour.jpg)"></div>
 			<div class="content">
 				<?php echo $profile->profile_ket; ?>

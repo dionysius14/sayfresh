@@ -47,7 +47,7 @@ class Home_model extends CI_Model {
         $this->db->select();
         $this->db->from('howto');
         $query = $this->db->get();
-        return $query->result();
+        return $query->row();
     }
 	function get_slider_home() {
         $this->db->select();
@@ -87,7 +87,7 @@ class Home_model extends CI_Model {
         $this->db->select();
         $this->db->from('data_produk');
         $this->db->order_by("sort", "DESC");
-		$this->db->limit(6);
+		$this->db->limit(8);
         $query = $this->db->get();
         return $query->result();
     }

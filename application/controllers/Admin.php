@@ -63,11 +63,14 @@ class Admin extends CI_Controller {
         $gc->display_as('profile_ket', 'Profile');
         $gc->display_as('overview', 'Company Overview');
         $gc->display_as('link_fb', 'Link Facebook');
-        $gc->display_as('link_tw', 'Link Twitter');
-        $gc->display_as('link_yt', 'Link Youtube');
         $gc->display_as('link_ig', 'Link Instagram');
         $gc->display_as('link_wa', 'Whatsapp');
+        $gc->display_as('phone', 'HP');
+        $gc->display_as('email', 'Email');
+        $gc->display_as('working_time', 'Working Time');
         $gc->display_as('headoffice', 'Alamat Head Office');
+        $gc->display_as('latitude', 'Latitude');
+        $gc->display_as('longitude', 'Longitude');
         $gc->required_fields('profile_ket','overview');
 		$gc->set_field_upload('catalog', 'assets/uploads/catalog');
         $gc->unset_print();
@@ -76,26 +79,6 @@ class Admin extends CI_Controller {
         $output = $gc->render();
         $output->title = 'Profile| Web Admin';
         $output->subtitle = 'Profile';
-        $output->notes = '<p><i></i></p>';
-        $this->paint_slice($output);
-    }
-    public function branch() {
-        $this->mylib->checkloginadmin();
-        $gc = new grocery_CRUD();
-        $gc->set_subject('Cabang');
-        $gc->set_table('data_branch');
-        $gc->display_as('branch_nama', 'Branch');
-        $gc->display_as('branch_alamat', 'Alamat');
-        $gc->display_as('latitude', 'Latitude');
-        $gc->display_as('longitude', 'Longitude');
-        $gc->display_as('link_wa', 'Link Whatsapp');
-        $gc->required_fields('branch_nama','branch_alamat');
-        $gc->unset_print();
-        // $gc->unset_add();
-        // $gc->unset_delete();
-        $output = $gc->render();
-        $output->title = 'Cabang| Web Admin';
-        $output->subtitle = 'Cabang';
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
@@ -146,6 +129,7 @@ class Admin extends CI_Controller {
         $gc->display_as('banner', 'Banner');
         $gc->display_as('deskripsi', 'Deskripsi');
         $gc->display_as('harga', 'Harga');
+        $gc->display_as('harga_jual', 'Harga Diskon');
         $gc->set_field_upload('banner', 'assets/uploads/banner');
         $gc->required_fields('nama', 'lokasi');
         $gc->unset_print();
@@ -195,9 +179,12 @@ class Admin extends CI_Controller {
         $gc->set_subject('How to Order');
         $gc->set_table('howto');
         $gc->change_field_type('faq_id', 'invisible');
-        $gc->display_as('howto_step', 'Step');
+        $gc->display_as('howto_image', 'Step Image');
+        $gc->display_as('howto_artikel', 'Artikel');
+        $gc->set_field_upload('howto_image', 'assets/uploads/howto');
         $gc->required_fields('howto_step');
         $gc->unset_print();
+        $gc->unset_add();
         $output = $gc->render();
         $output->title = 'Data How to Order | Web Admin';
         $output->subtitle = 'Data How to Order';

@@ -2,9 +2,9 @@
     <div class="footer">
     	<div class="container">
 			<div class="row about">
-				<h3>About Agriland</h3>			
+				<h3>About Sayfresh</h3>			
 				<div>
-					Lorem ipsum dolor sit amet ectetur adipiscing elit. Nullam eget dolor sit amet sed diam nonummy nibh euismod. Mirum est notare quam littera gIt is a long established fact that a reader will content of a distracted admin. Amet sed diam nonummy nibh euismod. Mirum est notare quam littera gIt is a long established.
+					<?php echo $profile->overview; ?>
 				</div>
 			</div>
 			<div class="row contact">
@@ -12,13 +12,13 @@
 				<div>
 					<ul>
 						<li>
-							<span>Sed dignissim, diam id molestie faucibus, purus nisl pretium quam, in pulvinar velit massa id elit.</span>
+							<span>Please contact Us below for more detail information.</span>
 						</li>
 						<li>
-							<i class="icon-phone"></i><span>(+011) 244-022-5771</span>
+							<i class="icon-phone"></i><span><?php echo $profile->phone; ?></span>
 						</li>
 						<li>
-							<i class="icon-globe"></i><span>991 Agriland Works, Ballard Street, Germany.</span>
+							<i class="icon-globe"></i><span><?php echo $profile->headoffice; ?></span>
 						</li>
 					</ul>
 				</div>

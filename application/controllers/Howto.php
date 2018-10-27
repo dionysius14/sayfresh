@@ -28,7 +28,7 @@ class Howto extends CI_Controller {
 
     public function index() {
         $this->session->set_userdata("last_url", "contact");
-        $common['title'] = 'Faq';
+        $common['title'] = 'How to Order';
         $common['profile'] = $this->home_model->get_profile();
         $common['slider'] = $this->home_model->get_slider_home();
         $common['branch'] = $this->home_model->get_branch();

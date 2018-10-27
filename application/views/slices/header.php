@@ -3,17 +3,17 @@
       <div class="container">
         <div class="social">
           <ul>
-            <li><a class="fb" href="<?php echo $profile->link_fb; ?>" ><i class="icon-facebook"></i></a></li>
-            <li><a class="ig" href="<?php echo $profile->link_ig; ?>" ><i class="icon-instagram"></i></a></li>
+            <li><a class="fb" target="blank" href="<?php echo $profile->link_fb; ?>" ><i class="icon-facebook"></i></a></li>
+            <li><a class="ig" target="blank" href="<?php echo $profile->link_ig; ?>" ><i class="icon-instagram"></i></a></li>
           </ul>
         </div>
         <div class="text-above">
-          <a class="whatsapp" href="<?php echo $profile->link_wa; ?>" >
+          <a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
             <span class="whatsapp-icon">
-            <strong>(+011) 244-022-5771</strong></span>
+            <strong><?php echo $profile->phone; ?></strong></span>
           </a>
         </div>
-        <div id="google_translate_element"></div>
+        <!--div id="google_translate_element"></div-->
       </div>
     </div>
     <div class="middle">
@@ -27,15 +27,15 @@
           <ul>
             <li class="address">
               <i class="icon-home"></i>
-              <span><strong>142, Aalakna ajsk</strong><p>Rcd Us</p></span>
+              <span><strong>Alamat</strong><p><?php echo $profile->headoffice; ?></p></span>
             </li>
             <li class="email">
               <i class="icon-envelope"></i>
-              <span><strong>Email Address</strong><p>asdasda@adasdasd.com</p></span>
+              <span><strong>Email Address</strong><p><?php echo $profile->email; ?></p></span>
             </li>
             <li class="hours">
               <i class="icon-time"></i>
-              <span><strong>Working Time</strong><p>Mon-Fri : 10AM - 5PM</p></span>
+              <span><strong>Working Time</strong><p><?php echo $profile->working_time; ?></p></span>
             </li>
           </ul>
         </div>
@@ -57,12 +57,12 @@
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
            <li class="list-menu about">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">About</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Catalog</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Products</a>
            </li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">News</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">News and Event</a>
            </li>
            <li class="list-menu category">
               <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("howto"); ?>">How to Order</a>
@@ -75,7 +75,7 @@
            </li>
         </ul>
         <div class="download">
-          <a href="">
+          <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
             <span>Download Plan</span>
           </a>
         </div>

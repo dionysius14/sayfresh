@@ -17,12 +17,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input type="email" id="kontak_email" name="kontak_email" placeholder="Email" required>
                     </li>
                     <li>
-                        <input type="text" id="kontak_subject" name="kontak_subject" placeholder="Subject" required>
+                        <input type="text" id="kontak_phone" name="kontak_phone" placeholder="Phone" required>
                     </li>
                     <li>
                         <textarea rows="4" cols="50" id="kontak_keterangan" placeholder="Message" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
                     </li>
-                    <div class="g-recaptcha" data-sitekey="6LcNYloUAAAAALbqUieM3LzBsYE56gpWPxEUeWdQ"></div>
                 </ul>
                 <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
                 <?php echo form_close(); ?> 
@@ -36,32 +35,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="box">
                         <i class="icon-map-marker"></i>
                         <span>Our Location</span>
-                        <p>PO Box 1025MNO Collins Street West Victoria</p>
-                        <p>8007 New York</p>
+                        <p><?php echo $profile->headoffice; ?></p>
                     </div>
                 </div>
                 <div class="boxes">
                     <div class="box hours">
                         <i class="icon-time"></i>
                         <span>Business Hours</span>
-                        <p>Mon-Sat:9.00am to 8.00pm </p>
-                        <p>Sunday Closed</p>
+                        <p><?php echo $profile->working_time; ?></p>
                     </div>
                 </div>
                 <div class="boxes">
                     <div class="box email">
                         <i class="icon-envelope"></i>
                         <span>Email Us</span>
-                        <p>support@domain.com</p>
-                        <p>faq@domain.com</p>
+                        <p><?php echo $profile->email; ?></p>
                     </div>
                 </div>
                 <div class="boxes">
                     <div class="box call">
                         <i class="icon-phone"></i>
                         <span>Call Us</span>
-                        <p>+61-1234-567-980</p>
-                        <p>+61-1234-567-999</p>
+                        <p><?php echo $profile->phone; ?></p>
                     </div>
                 </div>
             </div>
@@ -74,7 +69,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript">
     function initMap() {
         // The location of GB
-        var gb = {lat: 0.4920993, lng: 101.4842535};
+		var latitude = <?php echo $profile->latitude; ?>;
+		var longitude = <?php echo $profile->longitude; ?>;
+        var gb = {lat: latitude, lng: longitude};
         // The map, centered at GB
         var map = new google.maps.Map(
             document.getElementById('map'), {zoom: 18, center: gb, mapTypeId: google.maps.MapTypeId.ROADMAP});
@@ -84,13 +81,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             position: gb,
             map: map,
             // icon: iconBase + 'marker1.png',
-            title: "Nurani Jaya"
+            title: "Sayfresh"
         });
 
         var content = '<div>' +
-            '<div class="map-title"><strong>CV Nurani Jaya</strong></div>' +
-            '<div class="map-content"><span>JL. BUKIT BARISAN NO 20, TENAYAN RAYA, TANGKERANG TIMUR, PEKANBARU RIAU 28131 (DEPAN SMU NEGERI 10 PEKANBARU) </span></div>' +
-            '</div>';
+            '<div class="map-title"><strong>Sayfresh</strong></div>';
 
         var infowindow = new google.maps.InfoWindow({
             content: content,

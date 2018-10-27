@@ -48,7 +48,7 @@ class Contact extends CI_Controller {
 				$this->home_model->insertkontak($data);
 				$this->session->set_userdata('kontak_success', 1);
                 // $this->EmailSend($data);
-				
+				redirect('home');
 
     }
     public function EmailSend($data)

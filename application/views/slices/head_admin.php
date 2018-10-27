@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="utf-8">
 <title><?php echo ucwords($title); ?></title>
 <?php echo chrome_frame(); ?>
-<link rel="icon" href="<?php echo base_url(); ?>/assets/img/icons/as.png" type="image/x-icon" />
+<link rel="icon" href="<?=base_url()?>\assets\css\public\default\img\sayfresh-favicon.gif" type="image/gif">
 <?php echo view_port(); ?>
 <?php echo apple_mobile(); ?>
 <?php

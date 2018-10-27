@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="content">
 		<div class="news-container">
 		<?php foreach($news as $nw){?>
-			<div class="news-items well">
+			<div class="news-items">
 				<div class="item">
 					<h2 ><?php echo $nw->news_judul; ?></h2>
 					<div class="date">
