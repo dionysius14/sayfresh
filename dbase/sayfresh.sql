@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2018 at 04:41 PM
+-- Generation Time: Oct 28, 2018 at 05:29 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -307,7 +307,7 @@ CREATE TABLE `data_profile` (
   `link_wa` varchar(255) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `headoffice` text NOT NULL,
+  `headoffice` varchar(255) NOT NULL,
   `working_time` varchar(50) NOT NULL,
   `catalog` varchar(255) NOT NULL,
   `latitude` varchar(30) NOT NULL,
@@ -319,7 +319,7 @@ CREATE TABLE `data_profile` (
 --
 
 INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_fb`, `link_wa`, `phone`, `email`, `headoffice`, `working_time`, `catalog`, `latitude`, `longitude`) VALUES
-(1, '<p>\n	Sayfresh lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet.</p>\n<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet</p>\n<p>\n	lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit&nbsp;</p>\n', 'https://www.instagram.com/', 'https://www.facebook.com/', 'https://api.whatsapp.com/send?phone=6285100633893&text=Halo CV.NURANI JAYA/PT.NURANI JAYA ENERGI', '6285100633893', 'test@sayfresh.com', '<div>\n	Jl Solo km 11 Yogyakarta</div>\n', 'Mon-Fri : 08AM - 5PM', 'aed7a-installation_guide.pdf', '0.4920993', '101.4842535');
+(1, '<p>\n	Sayfresh lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet.</p>\n<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet</p>\n<p>\n	lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit&nbsp;</p>\n', 'https://www.instagram.com/', 'https://www.facebook.com/', 'https://api.whatsapp.com/send?phone=6285100633893&text=Halo CV.NURANI JAYA/PT.NURANI JAYA ENERGI', '6285100633893', 'test@sayfresh.com', 'Jl Solo km 11 Yogyakarta', 'Mon-Fri : 08AM - 5PM', 'aed7a-installation_guide.pdf', '0.4920993', '101.4842535');
 
 -- --------------------------------------------------------
 
@@ -547,7 +547,7 @@ ALTER TABLE `data_kategori`
 -- AUTO_INCREMENT for table `data_kontak`
 --
 ALTER TABLE `data_kontak`
-  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `data_news`
 --
