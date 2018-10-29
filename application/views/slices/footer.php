@@ -25,5 +25,5 @@
 			</div>
     	</div>
     </div>
-    <div class="copyright">Copyright Sayfresh (2018)</div>
+    <div class="copyright">Copyright 2018 All Right Reserved</div>
 </div>

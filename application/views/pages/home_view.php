@@ -18,6 +18,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					speed: 700,
 					pager: false
 				});
+				if ($(window).width() < 480) {
+				    $('.bxslider > li > a > img').each(function(){
+						var $newdiv1 = $( "<span></span>" );
+						$(this).parent().prepend($newdiv1);
+				        var src = $(this).attr('src');
+				        $(this).parent().css('background-image', 'url(' + src + ')');
+				        $(this).parent().css('background-size', 'cover');
+				        $(this).parent().css('background-repeat', 'no-repeat');
+				        $(this).parent().css('background-position', 'center');
+				    });
+				}
 			});
 		</script>
 		<div class="container">
