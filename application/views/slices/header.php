@@ -1,17 +1,18 @@
 <div class="header">
     <div class="upper">
       <div class="container">
-        <div class="social">
-          <ul>
-            <li><a class="fb" target="blank" href="<?php echo $profile->link_fb; ?>" ><i class="icon-facebook"></i></a></li>
-            <li><a class="ig" target="blank" href="<?php echo $profile->link_ig; ?>" ><i class="icon-instagram"></i></a></li>
-          </ul>
-        </div>
         <div class="text-above">
           <a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
-            <span class="whatsapp-icon">
-            <strong><?php echo $profile->phone; ?></strong></span>
+<!--             <span class="whatsapp-icon">
+            <strong><?php echo $profile->phone; ?></strong></span> -->
+            <strong>PT. PANGAN SEHAT NUSANTARA</strong>
           </a>
+        </div>
+        <div class="social">
+          <ul>
+            <li><a class="ig" target="blank" href="<?php echo $profile->link_ig; ?>" ><i class="icon-instagram"></i></a></li>
+            <li><a class="fb" target="blank" href="<?php echo $profile->link_fb; ?>" ><i class="icon-facebook"></i></a></li>
+          </ul>
         </div>
         <!--div id="google_translate_element"></div-->
       </div>
@@ -43,17 +44,17 @@
     </div>
     <div class="header-menu" id="navbar">
       <div class="container">
-<!--         <div class="mobile-menu">
-          <div class="mobile-menu-container">
-            <i class="fa fa-menu"></i>
-            <span>Menu</span>
-          </div>
-        </div>
         <div class="logo-mobile">
           <a href="<?php echo base_url(); ?>">
-              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\sayfresh-logo.png">
           </a>
-        </div> -->
+        </div>
+        <div class="mobile-menu">
+          <div class="mobile-menu-container">
+            <i class="icon-list-ul"></i>
+            <!-- <span>Menu</span> -->
+          </div>
+        </div>
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
            <li class="list-menu about">
@@ -78,6 +79,22 @@
           <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
             <span>Download Plan</span>
           </a>
+        </div>
+        <div class="info">
+          <ul>
+            <li class="address">
+              <i class="icon-home"></i>
+              <span><strong>Alamat</strong><p><?php echo $profile->headoffice; ?></p></span>
+            </li>
+            <li class="email">
+              <i class="icon-envelope"></i>
+              <span><strong>Email Address</strong><p><?php echo $profile->email; ?></p></span>
+            </li>
+            <li class="hours">
+              <i class="icon-time"></i>
+              <span><strong>Working Time</strong><p><?php echo $profile->working_time; ?></p></span>
+            </li>
+          </ul>
         </div>
       </div>
    </div>

@@ -16,7 +16,7 @@ h1, h2, h3, h4{
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;    
-    padding: 0px;
+    padding: 0px 15px;
 }
 .header .upper{
     background: #8dd842;
@@ -30,6 +30,9 @@ h1, h2, h3, h4{
     float: left;
     text-align: center;
 }
+.header .upper .container > div.social{
+    float: right;
+}
 .header .upper .container > div#google_translate_element{
     text-align: right;
 }
@@ -41,7 +44,7 @@ h1, h2, h3, h4{
 .header .upper .container .social ul li{
     width: 31px;
     height: 31px;
-    float: left;    
+    float: right;    
     margin-right: 20px;
 }
 .header .upper .container .social ul li a{
@@ -57,6 +60,14 @@ h1, h2, h3, h4{
     position: relative;    
     display: block;
     height: 30px;
+}
+.header .upper .container .text-above .whatsapp{
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 30px;
 }
 .header .upper .container .text-above .whatsapp .whatsapp-icon{
     width: 170px;
@@ -86,7 +97,6 @@ h1, h2, h3, h4{
     transition: all 0.4s ease-in-out 0s;
     z-index: 999;
     background: #ffffff;
-    padding: 20px 7%;
     overflow: hidden;
 }
 .header .middle .container{
@@ -101,7 +111,7 @@ h1, h2, h3, h4{
     max-width: 200px;;
 }
 
-.header .middle div.info{
+.header div.info{
     float: none;
     width: 100%;
     max-width: 680px;
@@ -111,11 +121,11 @@ h1, h2, h3, h4{
     top: 50%;
     transform: translateY(-50%);
 }
-.header .middle div.info ul{
+.header div.info ul{
     list-style: none;
     overflow: hidden;
 }
-.header .middle div.info ul li{
+.header div.info ul li{
     width: calc(100%/3);
     float: left;
     text-align: left;
@@ -124,7 +134,7 @@ h1, h2, h3, h4{
     position: relative;
     letter-spacing: 0.7px;
 }
-.header .middle div.info ul li i{
+.header div.info ul li i{
     position: absolute;
     left: 0;
     top: 0px;
@@ -132,7 +142,7 @@ h1, h2, h3, h4{
     padding: 5px;
     border-radius: 30px;
 }
-.header .middle div.info ul li i:before{
+.header div.info ul li i:before{
     font-size: 26px;
     color: #8dd842;
 }
@@ -174,6 +184,7 @@ h1, h2, h3, h4{
     float: right;
     position: relative;
     top: 10px;
+    right: 10px;
 }
 .header .header-menu .download a{
     color: white;
@@ -515,6 +526,7 @@ h2{
     background-position: center center;
     display: block;    
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 .back-home.animsition .side .points{
     margin-top: 20px;
@@ -677,7 +689,11 @@ h2{
 }
 
 .howto .big-image img{
-    width: 100%;
+    width: 100%;    
+    margin-bottom: 20px;
+}
+.howto .item{
+    text-align: justify;
 }
 
 
@@ -772,6 +788,10 @@ h2{
     overflow: hidden;
     margin-bottom: 20px;
 }
+.news .content .item .news-desc{
+    overflow: hidden;
+    margin-top: 10px;
+}
 .news .content .item .news-desc img{
     width: 30%;
     float: left;
@@ -793,12 +813,239 @@ h2{
     border: 0px;
     box-shadow: none;
 }
+.mobile-menu {
+    display: none;
+}
+.header .logo-mobile {
+    display: none;
+}
+.header-menu .info {
+    display: none;
+}
 
-
+@media only screen and (max-width: 1023px) {
+    .header .upper {
+        padding: 5px 10px;
+    }
+    .header .middle .container div{
+        width: 100%;
+        float: none;
+        position: relative;
+        top: 0px;
+        transform: none;    
+        max-width: 100%;
+    }
+    .header .middle .container div.logo{
+        text-align: center;    
+        margin-bottom: 20px;
+    }
+    .header .header-menu .navbar-nav{
+        float: none;
+    }
+    .header .header-menu .download{
+        display: block;
+        float: none;
+        position: relative;
+        top: 0px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        left: 0;
+    }
+    .homepage .products .container .gkImage {
+        width: calc(100% / 2);
+    }
+    .back-home.animsition .profile.container .side {
+        width: 100%;
+    }
+    .back-home.animsition .side img{
+        width: 100%;
+    }
+    .ourproduct .ourproduct-container .container .main .items .item {
+        width: calc(100% / 2);
+    }
+    .ourproduct .ourproduct-container .container .sidebar-category ul li {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    .news .content .item .viewall {
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+    .news .content .news-container .news-items.well .item .news-desc p,
+    .news .content .news-container .news-items.well .item .news-desc img{
+        width: 100%;
+    }
+    .news .content .news-container .news-items.well .item .news-desc img{
+        margin-bottom: 20px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
+    .header .upper .container > div {
+        width: 50%;
+    }
+    .header .middle .container  > .logo,
+    .header .middle .container  > .info{
+        display: none;
+    }
     .container{
         padding-right: 15px;
         padding-left: 15px;
+    }
+    .mobile-menu {
+        margin-bottom: 10px;
+        color: black;
+        position: absolute;
+        top: 95px;
+        left: 15px;
+        display: block;
+        width: 40px;
+        margin-top: 10px;
+    }
+    .mobile-menu .mobile-menu-container .icon-list-ul:before{
+        font-size: 30px;
+        color: #858585;
+    }
+    .mobile-menu.active .mobile-menu-container .icon-list-ul:before{
+        color: #8dd842;
+    }
+    .header .header-menu .info {
+        position: relative;
+        top: initial;
+        right: initial;
+        top: initial;
+        transform: none;
+        margin-top: 55px;
+        padding: 0px 10px;    
+        max-width: 100%;
+    }
+    .header-menu .info {
+        display: block;
+    }
+    .header .logo-mobile {
+        display: block;
+        width: 160px;
+        max-width: 160px;
+        position: relative;    
+        margin: 0 auto;
+    }
+    .header .logo-mobile img{
+        width: 100%;
+    }
+    .header .header-menu .download{
+        position: absolute;
+        right: 10px;
+        top: 90px;
+        left: initial;
+    }
+    .header .header-menu .navbar-nav {
+        margin: 0px;    
+        margin-top: 60px;
+        display: none;
+    }
+    .header .header-menu.active .navbar-nav {
+        display: block;
+    }
+    .header .header-menu .navbar-nav li{
+        padding-top: 0px;
+        margin: 0px;
+        text-align: center;    
+        width: 100%;
+    }
+    .homepage .testimonial h3{
+        text-align: center;
+    }
+    .homepage .testimonial .container .gkImage {
+        width: calc(100% / 2);
+    }
+    .homepage .testimonial .container .gkImage:nth-child(3n+1){
+        clear: left;
+    }
+    .contact-us .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .header div.info ul li,
+    .footer-container .footer .container > .row{
+        width: 100%;
+    }
+    .bx-wrapper {
+        margin-bottom: 0px;
+    }
+    .homepage .why{
+        padding: 0px;
+    }
+    .homepage .why h1{
+        text-align: center;
+    }
+    .back-home.animsition .side {
+        float: none;
+        padding: 0px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .homepage .why .side ul li {
+        float: none;
+        width: 100%;
+    }
+    .homepage .why .side ul li:nth-child(2n+1) {
+        clear: both;
+    }
+    .back-home.animsition .side .points h2 {
+        width: 73%;
+    }
+    .news .content .item .news-desc img {
+        width: 100%;
+        float: left;
+    }
+    .news .content .item .news-desc p {
+        width: 100%;
+        float: none;
+        padding-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .homepage .homepage-container .slider .bx-wrapper .bx-viewport {
+        min-height: 380px !important;
+    }    
+    .homepage .homepage-container .slider .bx-wrapper a{
+        display: block;
+    }
+    .homepage .homepage-container .slider .bx-wrapper a span{
+        display: block;
+        width: 100%;
+        height: 380px;
+    }
+    .homepage .products .container .gkImage {
+        width: 100%;
+    }
+    .homepage .testimonial .container .gkImage {
+        width: calc(100%);
+    }
+    .homepage .testimonial .container .gkImage:nth-child(2n+1){
+        clear: both;
+    }
+
+    .ourproduct .ourproduct-container .container .main .items .item {
+        width: 100%;
+    }
+    .faq .item .text {
+        width: 100%;
+    }
+    .header .upper .container .text-above .whatsapp {
+        font-size: 12px;
+    }
+    .header .upper .container {
+        overflow: hidden;
+        padding: 0px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .header .upper .container .text-above .whatsapp {
+        font-size: 9px;
     }
 }
