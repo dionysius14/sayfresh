@@ -2,7 +2,7 @@
     <div class="upper">
       <div class="container">
         <div class="text-above">
-          <a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
+          <a class="whatsapp" target="blank" >
 <!--             <span class="whatsapp-icon">
             <strong><?php echo $profile->phone; ?></strong></span> -->
             <strong>PT. PANGAN SEHAT NUSANTARA</strong>
@@ -27,8 +27,13 @@
         <div class="info">
           <ul>
             <li class="address">
-              <i class="icon-home"></i>
-              <span><strong>Alamat</strong><p><?php echo $profile->headoffice; ?></p></span>
+              <i class="icon-phone"></i>
+              <span>
+                <strong>Whatsapp</strong>
+                <a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
+                  +<?php echo $profile->phone; ?>
+                </a>
+              </span>
             </li>
             <li class="email">
               <i class="icon-envelope"></i>
@@ -77,14 +82,19 @@
         </ul>
         <div class="download">
           <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
-            <span>Download Plan</span>
+            <span>Download Katalog</span>
           </a>
         </div>
         <div class="info">
           <ul>
             <li class="address">
-              <i class="icon-home"></i>
-              <span><strong>Alamat</strong><p><?php echo $profile->headoffice; ?></p></span>
+              <i class="icon-phone"></i>
+              <span>
+                <strong>Whatsapp</strong>
+                <a class="whatsapp" target="blank" href="<?php echo $profile->link_wa; ?>" >
+                  +<?php echo $profile->phone; ?>
+                </a>
+              </span>
             </li>
             <li class="email">
               <i class="icon-envelope"></i>
