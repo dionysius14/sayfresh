@@ -168,7 +168,7 @@ h1, h2, h3, h4{
 }
 .header .header-menu .container{
     position: relative;
-    padding: 10px 0px;
+    padding: 10px 10px;
 }
 .header .header-menu .navbar-nav{
     display: block;
@@ -199,14 +199,29 @@ h1, h2, h3, h4{
     display: block;
     float: right;
     position: relative;
-    top: 10px;
+    top: 0px;
     right: 10px;
+}
+.header .header-menu .download ul{
+    list-style: none;
+}
+.header .header-menu .download li{
+    float: right;   
+    width: 45%;
+    max-width: 175px;    
+    text-align: center;
+}
+.header .header-menu .download li:last-child{
+    margin-top: 4px;
+    margin-right: 10px;
+}
+.header .header-menu .download li:first-child{
+    background: #7ec13a;
+    padding: 10px;
 }
 .header .header-menu .download a{
     color: white;
-    padding: 10px;
     text-transform: uppercase;
-    background: #7ec13a;
     transition: all 0.6s ease-in-out 0s;
 }
 .header .header-menu .download a:hover,
@@ -376,6 +391,18 @@ h2{
 .homepage .products .container{
     overflow: hidden;    
     padding: 30px 0px;
+    text-align: center;
+}
+.homepage .products .container > a{
+    background: rgba(141, 216, 66, 0.6);
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    display: block;
+    clear: both;
+    max-width: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 .homepage .products .container .gkImage{
     width: calc(100% / 4);
@@ -493,7 +520,7 @@ h2{
     height: 0;
     border-style: solid;
     border-width: 100px 100px 0 0;
-    border-color: #00dcff transparent transparent transparent;
+    border-color: #8dd842 transparent transparent transparent;
     position: absolute;    
     left: 0;    
     top: 0;
@@ -687,6 +714,29 @@ h2{
     color: #777777;
 }
 
+.detailproduct{
+    position: relative;
+}
+.detailproduct .back{
+    clear: both;
+}
+.detailproduct .side{
+    text-align: right;
+}
+.detailproduct .side.detail{
+    text-align: justify;
+    padding-left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 40%;
+    transform: translateY(-40%);
+    padding-left: 0px;
+}
+.detailproduct .side img{
+    width: 100%;
+    max-width: 400px;
+}
+
 
 .faq .page-header,
 .howto .page-header{
@@ -839,6 +889,11 @@ h2{
     display: none;
 }
 
+@media only screen and (max-width: 1280px) {
+    .prod-price > span{
+        display: block;
+    }
+}
 @media only screen and (max-width: 1190px) {
     .header .middle .container div{
         width: 75%;
@@ -846,6 +901,25 @@ h2{
     .header div.info ul li p,
     .header div.info ul li a{
         font-size: 12px;
+    }
+    .header .header-menu .download{
+        width: 100%;
+        right: 0px;
+        padding: 0px 10px;    
+        margin-top: 10px;
+    }
+    .header .header-menu .download ul{
+        overflow: hidden;   
+    }
+    .header .header-menu .download li:last-child{
+        width: 100%;
+        max-width: 100%;
+        margin: 0px; 
+    }
+    .header .header-menu .download li:first-child{
+        position: absolute;
+        right: 10px;
+        top: -52px;
     }
 }
 @media only screen and (max-width: 1023px) {
@@ -877,6 +951,24 @@ h2{
         margin-left: 10px;
         left: 0;
     }
+    .header .header-menu .download{
+        padding: 0px;
+    }
+    .header .header-menu .download li:first-child {
+        position: relative;
+        right: 10px;
+        top: 0px;
+    }
+    .header .header-menu .download li:last-child{
+        width: 75%;
+        max-width: 100%;
+        float: left;
+        margin: 0px;    
+        margin-top: 3px;
+    }
+
+
+
     .homepage .products .container .gkImage {
         width: calc(100% / 2);
     }
@@ -927,6 +1019,7 @@ h2{
         display: block;
         width: 40px;
         margin-top: 10px;
+        z-index: 9999;
     }
     .mobile-menu .mobile-menu-container .icon-list-ul:before{
         font-size: 30px;
@@ -945,6 +1038,9 @@ h2{
         padding: 0px 10px;    
         max-width: 100%;
     }
+    .header .header-menu .info.active{
+        margin-top: 5px;
+    }
     .header-menu .info {
         display: block;
     }
@@ -961,8 +1057,15 @@ h2{
     .header .header-menu .download{
         position: absolute;
         right: 10px;
-        top: 90px;
+        top: 80px;
         left: initial;
+    }
+    .header .header-menu .download li:last-child{
+        width: 100%;
+        max-width: 152px;
+        float: right;
+        margin-top: 0px;
+        right: 0px;
     }
     .header .header-menu .navbar-nav {
         margin: 0px;    
@@ -1031,6 +1134,12 @@ h2{
         width: 100%;
         float: none;
         padding-left: 0px;
+    }
+    .detailproduct .side.detail{
+        position: relative;
+        right: 0px;
+        top: initial;
+        transform: none;
     }
 }
 

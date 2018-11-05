@@ -85,6 +85,11 @@ class Ourproduct extends CI_Controller {
         $this->session->set_userdata('kategori_id',$id);
         redirect('ourproduct');
     }
+    public function setdetail(){
+        $id = $this->input->get('id');
+        $this->session->set_userdata('produk_id',$id);
+        redirect('detail');
+    }
     public function search(){
         $keyword = $this->input->post('filter');
         $this->session->set_userdata('keyword',$keyword);

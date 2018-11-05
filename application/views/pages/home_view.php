@@ -91,8 +91,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="gkImage">
 						<div class="image" style="background-image: url(<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>)">
 						</div>
-						<a href="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
-							<!--div class="button">Order Now</div-->
+						<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+							<div class="button">See Product</div>
 						</a>
 						<div class="text">
 							<div class="prod-name">
@@ -101,14 +101,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<div class="prod-price">
 							<?php if($dtl->harga_jual > 0 ){ ?>
 								<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') . '</b>' ?></del></span>
-								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') . '</b>'?></span>
+								<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
 							<?php }else{ ?>
-								<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') . '</b>' ?></span>
+								<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
 							<?php } ?>
 							</div>
 						</div>
 					</div>
 					<?php } ?>
+					<a href="<?php echo site_url("ourproduct"); ?>">Show All</a>
 				</div>
 			</div>
 

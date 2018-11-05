@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2018 at 05:29 PM
+-- Generation Time: Nov 05, 2018 at 02:13 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -278,6 +278,7 @@ CREATE TABLE `data_produk` (
   `banner` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `deskripsi` text NOT NULL,
+  `satuan` varchar(50) NOT NULL,
   `harga` decimal(15,2) NOT NULL,
   `harga_jual` decimal(15,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -286,11 +287,11 @@ CREATE TABLE `data_produk` (
 -- Dumping data for table `data_produk`
 --
 
-INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `sort`, `banner`, `nama`, `deskripsi`, `harga`, `harga_jual`) VALUES
-(109, 6, 1, 'daf4d-tomato-vegetable-facebook-400x400.jpg', 'Tomato', '<p>\n	Tomat</p>\n', '12000.00', '11000.00'),
-(110, 6, 2, 'd56ca-images.jpg', 'Spinach', '<p>\n	Spinach</p>\n', '5000.00', '0.00'),
-(111, 7, 3, 'cdcc2-vegetables-400x400.jpg', 'Mix Package', '<p>\n	Mix Package</p>\n', '45000.00', '43000.00'),
-(112, 6, 4, '8e87a-532400275.jpg', 'Carrot', '<p>\n	Carrot</p>\n', '15000.00', '0.00');
+INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `sort`, `banner`, `nama`, `deskripsi`, `satuan`, `harga`, `harga_jual`) VALUES
+(109, 6, 1, 'daf4d-tomato-vegetable-facebook-400x400.jpg', 'Tomato', '<p>\n	Tomat</p>\n', 'Buah', '12000.00', '11000.00'),
+(110, 6, 2, 'd56ca-images.jpg', 'Spinach', '<p>\n	Spinach</p>\n', 'Ikat', '5000.00', '0.00'),
+(111, 7, 3, 'cdcc2-vegetables-400x400.jpg', 'Mix Package', '<p>\n	Mix Package</p>\n', 'Pak', '45000.00', '43000.00'),
+(112, 6, 4, '8e87a-532400275.jpg', 'Carrot', '<p>\n	Carrot</p>\n', 'Ikat', '15000.00', '0.00');
 
 -- --------------------------------------------------------
 
@@ -319,7 +320,7 @@ CREATE TABLE `data_profile` (
 --
 
 INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_fb`, `link_wa`, `phone`, `email`, `headoffice`, `working_time`, `catalog`, `latitude`, `longitude`) VALUES
-(1, '<p>\n	Sayfresh lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet.</p>\n<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet</p>\n<p>\n	lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit&nbsp;</p>\n', 'https://www.instagram.com/', 'https://www.facebook.com/', 'https://api.whatsapp.com/send?phone=6285100633893&text=Halo CV.NURANI JAYA/PT.NURANI JAYA ENERGI', '6285100633893', 'test@sayfresh.com', 'Jl Solo km 11 Yogyakarta', 'Mon-Fri : 08AM - 5PM', 'aed7a-installation_guide.pdf', '0.4920993', '101.4842535');
+(1, '<p>\n	Sayfresh lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet.</p>\n<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet</p>\n<p>\n	lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit&nbsp;</p>\n', 'https://www.instagram.com/', 'https://www.facebook.com/', 'https://api.whatsapp.com/send?phone=6285100633893&text=Halo CV.NURANI JAYA/PT.NURANI JAYA ENERGI', '6285100633893', 'test@sayfresh.com', 'Jl Solo km 11 Yogyakarta', 'Mon-Fri : 08AM - 5PM', 'b95a1-desain-menu.pdf', '0.4920993', '101.4842535');
 
 -- --------------------------------------------------------
 

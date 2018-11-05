@@ -130,6 +130,7 @@ class Admin extends CI_Controller {
         $gc->display_as('deskripsi', 'Deskripsi');
         $gc->display_as('harga', 'Harga');
         $gc->display_as('harga_jual', 'Harga Diskon');
+        $gc->display_as('satuan', 'Satuan');
         $gc->set_field_upload('banner', 'assets/uploads/banner');
         $gc->required_fields('nama', 'lokasi');
         $gc->unset_print();
