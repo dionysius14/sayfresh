@@ -79,16 +79,20 @@
            <li class="list-menu category">
               <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a>
            </li>
-           <li class="list-menu category">
-						<?php echo form_open('ourproduct/search', 'id="form_add"'); ?>
-						<input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
-						<?php echo form_close(); ?>
-           </li>
         </ul>
         <div class="download">
-          <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
-            <span>Download Katalog</span>
-          </a>
+          <ul>
+            <li>
+              <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
+                <span>Download Katalog</span>
+              </a>
+            </li>
+            <li>
+              <?php echo form_open('ourproduct/search', 'id="form_add"'); ?>
+              <input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
+              <?php echo form_close(); ?>
+            </li>
+          </ul>
         </div>
         <div class="info">
           <ul>
@@ -147,8 +151,12 @@
       });
       $('.mobile-menu').click(function () {
         $('.header-menu').toggleClass('active');
+        $('.header .header-menu .info').toggleClass('active');
         $(this).toggleClass('active');
       });
+      if ($(window).width() < 769){
+        $('.header .header-menu .download li:last-child').prependTo( ".header .header-menu .navbar-nav" );
+      }
       if ($(window).width() < 481){
         $('.list-menu.category').click(function () {
             $('.list-menu.category .sub-category').toggleClass("active");
