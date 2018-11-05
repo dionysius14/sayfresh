@@ -79,6 +79,11 @@
            <li class="list-menu category">
               <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a>
            </li>
+           <li class="list-menu category">
+						<?php echo form_open('ourproduct/search', 'id="form_add"'); ?>
+						<input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
+						<?php echo form_close(); ?>
+           </li>
         </ul>
         <div class="download">
           <a target="blank" href="<?php echo base_url(); ?>assets/uploads/catalog/<?php echo $profile->catalog; ?>">
