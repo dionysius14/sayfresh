@@ -39,11 +39,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</a>
 							</div>
 							<div class="text">
-								<span>
-									<?php echo $dtl->nama; ?><br/>
-									<b>Rp <?php echo number_format($dtl->harga, 0, ',', '.'); ?></b>
-								</span>
-							</div>
+									<div class="prod-name">
+										<h4><?php echo $dtl->nama; ?></h4>
+									</div>
+									<div class="prod-price">
+									<?php if($dtl->harga_jual > 0 ){ ?>
+										<span class="old"><del><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') . '</b>' ?></del></span>
+										<span class="final"><?php echo '<b>Rp ' . number_format($dtl->harga_jual, 0, ',', '.') .'/'.$dtl->satuan. '</b>'?></span>
+									<?php }else{ ?>
+										<span class="old"><?php echo '<b>Rp ' . number_format($dtl->harga, 0, ',', '.') .'/'.$dtl->satuan. '</b>' ?></span>
+									<?php } ?>
+									</div>
+								</div>
 						</li>
 					<?php } }else{  ?>
 						<span><center>----- Produk tidak Ditemukan -----</center></span>
