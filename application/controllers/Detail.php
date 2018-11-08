@@ -31,6 +31,7 @@ class Detail extends CI_Controller {
         $common['title'] = 'Detail Product';
         $common['profile'] = $this->home_model->get_profile();
         $common['slider'] = $this->home_model->get_slider_home();
+        $common['kategori'] = $this->home_model->get_kategori();
         $common['branch'] = $this->home_model->get_branch();
         $common['detail'] = $this->db->query('SELECT * FROM data_produk WHERE produk_id = '.$this->session->userdata('produk_id').'')->row();
         $st = new Stencil();

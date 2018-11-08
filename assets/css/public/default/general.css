@@ -714,6 +714,23 @@ h2{
     color: #777777;
 }
 
+
+.ourproduct .ourproduct-container .container .main .search #form_add > button,
+.viewall a{
+    background: rgba(141, 216, 66, 0.6);
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    display: block;
+    clear: both;
+    max-width: 100px;
+    /* margin: 0 auto; */
+    margin-top: 10px;
+    border: 0px;
+}
+
+
+
 .detailproduct{
     position: relative;
 }
@@ -731,6 +748,9 @@ h2{
     top: 40%;
     transform: translateY(-40%);
     padding-left: 0px;
+}
+.detailproduct .side.detail h1{
+    text-align: left;
 }
 .detailproduct .side img{
     width: 100%;
