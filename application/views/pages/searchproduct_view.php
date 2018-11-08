@@ -33,11 +33,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<?php if(count($produk)>0){?>
 					<?php foreach($produk as $dtl){?>
 						<li class="item">
-							<div class="image">
-								<a href="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
-									<img class="logo" src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" />
-								</a>
+							<div class="image" style="background-image: url(<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>)">
 							</div>
+							<a href="<?php echo site_url("ourproduct/setdetail?id=".$dtl->produk_id.""); ?>">
+								<div class="button">See Product</div>
+							</a>
 							<div class="text">
 									<div class="prod-name">
 										<h4><?php echo $dtl->nama; ?></h4>
@@ -62,12 +62,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
-
-		var selector = jQuery('.item span');
-        var heights = [];
-        var selector2 = jQuery('.item .image img');
-        var imagesHeight = [];
-
         $('.container .main .items').each(function(){
 	        var imageHeight = 0;
 	        var imageText = 0;
@@ -87,6 +81,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	          $(this).find('.image').css({height:imageHeight});
 	          $(this).find('.text').css({height:imageText});
 	        }
-	    });     
+	    });   
 	});
 </script>

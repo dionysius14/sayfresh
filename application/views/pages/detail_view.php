@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="ourproduct">
 	<div class="ourproduct-container">
 	    <div class="container">
-	    	<h1>Detail Product</h1>
 	    	<div class="sidebar-category">
 	    		<div class="mobile-action"></div>
 	    		<ul>
