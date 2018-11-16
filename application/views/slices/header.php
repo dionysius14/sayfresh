@@ -57,7 +57,7 @@
         <div class="mobile-menu">
           <div class="mobile-menu-container">
             <i class="icon-list-ul"></i>
-            <!-- <span>Menu</span> -->
+            <span>Menu</span>
           </div>
         </div>
         <ul class="nav navbar-nav navbar-center" align="center">
@@ -154,9 +154,7 @@
         $('.header .header-menu .info').toggleClass('active');
         $(this).toggleClass('active');
       });
-      if ($(window).width() < 769){
-        $('.header .header-menu .download li:last-child').prependTo( ".header .header-menu .navbar-nav" );
-      }
+
       if ($(window).width() < 481){
         $('.list-menu.category').click(function () {
             $('.list-menu.category .sub-category').toggleClass("active");
