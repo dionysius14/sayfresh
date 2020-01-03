@@ -46,7 +46,7 @@
 	$lang['alert_delete']			= 'Are you sure that you want to delete this record?';
 
 	$lang['insert_error']			= 'An error has occurred on insert.';
-	$lang['update_error']			= 'An error has occurred on saving.';
+	$lang['update_error']			= 'Status CLOSED hanya bisa dilakukan oleh SPV.';
 
 	/* Added in version 1.2.1 */
 	$lang['set_relation_title']		= 'Select {field_display_as}';

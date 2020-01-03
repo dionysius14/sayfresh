@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="form-div">
                         <?php
                         $attributes = array('class' => 'form-login', 'id' => 'form-login');
-                        echo form_open('pswebadmin/password');
+                        echo form_open('admin/password');
                         ?>
                         <div class="form-group">
                             <label for="username">Username</label>

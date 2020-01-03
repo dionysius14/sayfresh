@@ -36,16 +36,6 @@ class Mylib {
         return "public/" . $tema->tema_folder . "/";
     }
 
-    function set_session($user) {
-        $CI = & get_instance();
-        $sess_data = array(
-            'login' => true,
-            'userid' => $user->rsvp_id,
-            'username' => $user->rsvp_user_name
-        );
-        $CI->session->set_userdata($sess_data);
-    }
-
     function set_session_admin($user) {
         $CI = & get_instance();
         $sess_data = array(
@@ -65,18 +55,16 @@ class Mylib {
         }
     }
 
-    function checklogin() {
-        $CI = & get_instance();
-        if ($CI->session->userdata('userid') == '') {
-            redirect('login/logout');
-        }
-    }
-
     function checkloginadmin() {
         $CI = & get_instance();
         if ($CI->session->userdata('useradmin') == '') {
             redirect('admin/login');
         }
     }
+    public function set_message($_class = "", $_function = "")
+    {
+        unset($_SESSION[$_class]);
+    }
+
 
 }

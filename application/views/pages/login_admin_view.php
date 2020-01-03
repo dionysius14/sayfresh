@@ -2,13 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div class="container">
-    <section id="login">
+        <br/><br/>
+        <br/><br/>
+        <br/><br/>
+    <section id="login" >
         <div class="row">
             <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 col-sm-12 col-xs-12">
-                <div class="form-div logbox">
+                <div >
                     <center>
                         <div class="titlebox">
-                            <h2 class="parisienne"><strong>Web Admin</strong></h2>
+                            <center>
+                            <span class="logo-lg">
+                            <img style="margin-top: -5px; width:60%;height:60%;" src="<?php echo base_url('assets/img/logo.png'); ?>"
+                                 class="user-image" alt="Logo"/> 
+                             </center>
                         </div>
                     </center>
                     <br/>
@@ -23,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input required class="form-control field-input" name="password" type="password" placeholder="Password"/>
                     </div>
                     <div class="form-group">
-                        <button style="width: 100%" class="btn btn-choco" name="login" type="submit"><i class="fa fa-fw fa-sign-in"></i> LOGIN</button>
+                        <button style="width: 100%" class="btn btn-success" name="login" type="submit"><i class="fa fa-fw fa-sign-in"></i> LOGIN</button>
                     </div>
                     <div class="form-group">
                         <?php

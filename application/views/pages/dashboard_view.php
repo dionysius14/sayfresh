@@ -16,8 +16,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
             </div>
+            <!-- footer content -->
+            <div class="container" style="text-align: right; padding: 10px 10px 5px 10px;">
+                <p>Copyright &copy; <a href="#"></a> 2019</p>
+            </div>
+            <!-- /footer content -->
         </div>
-        <?php echo $footer_admin; ?>
     </div>
     <!-- /page content -->
 </div> 

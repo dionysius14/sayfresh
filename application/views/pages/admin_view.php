@@ -25,9 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <!-- /page content -->
 
             <!-- footer content -->
-            <!--div class="container" style="text-align: right; padding: 10px 10px 5px 10px; box-shadow: 0px 0px 5px #000;">
-                <p>Copyright &copy; <a href="#"></a> 2017</p>
-            </div-->
+            <div class="container" style="text-align: right; padding: 10px 10px 5px 10px;">
+                <p>Copyright &copy; <a href="#"></a> 2019</p>
+            </div>
             <!-- /footer content -->
         </div>
     </div>

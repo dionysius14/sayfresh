@@ -4,29 +4,69 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="col-md-3 left_col menu_fixed">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="<?php echo site_url('admin'); ?>" class="site_title">&nbsp;&nbsp;<span style="font-size: 18px;">Web Admin</span></a>
+            <a href="<?php echo site_url('admin'); ?>" class="site_title">
+                <center>
+                <span class="logo-lg">
+                <img style="margin-top: -5px; width:45%;height:45%;" src="<?php echo base_url('assets/img/logo.png'); ?>"
+                     class="user-image" alt="Logo"/> 
+                 </center>
+            </a>
+
         </div>
         <div class="clearfix"></div>
         <br/>
+        <?php
+         $user = $this->db->query('SELECT b.role_id as role 
+                                    FROM data_user a 
+                                    JOIN data_role b ON b.role_id = a.role_id 
+                                    WHERE a.user_id=' . $this->session->userdata('useradmin'))->row();
+        ?>
         <!-- sidebar menu -->
         <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <?php if($user->role != 4) { ?> 
             <div class="menu_section">
-                <h3>General</h3>
+                <h3>Data Master</h3>
                 <ul class="nav side-menu">
-                    <!--<li><a href="<?php echo site_url('admin/dashboard'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>-->
-                    <li><a href="<?php echo site_url('admin/profile'); ?>"><i class="fa fa-fw fa-user"></i> Profile</a></li>
-                    <li><a href="<?php echo site_url('admin/kategori'); ?>"><i class="fa fa-fw fa-tag"></i> Kategori</a></li>
-                    <li><a href="<?php echo site_url('admin/produk'); ?>"><i class="fa fa-fw fa-tag"></i> Produk</a></li>
-                    <li><a href="<?php echo site_url('admin/kontak'); ?>"><i class="fa fa-fw fa-envelope"></i> Data Kontak</a></li>
-                    <!-- <li><a href="<?php echo site_url('admin/chat'); ?>"><i class="fa fa-fw fa-users"></i> Online Chat</a></li> -->
-                    <li><a href="<?php echo site_url('admin/slider'); ?>"><i class="fa fa-fw fa-image"></i> Slider</a></li>
-                    <li><a href="<?php echo site_url('admin/testimonial'); ?>"><i class="fa fa-fw fa-users"></i> Testimonial</a></li>
-                    <li><a href="<?php echo site_url('admin/news'); ?>"><i class="fa fa-fw fa-envelope"></i> News/Event</a></li>
-                    <li><a href="<?php echo site_url('admin/faq'); ?>"><i class="fa fa-fw fa-question"></i> FAQ</a></li>
-                    <li><a href="<?php echo site_url('admin/howto'); ?>"><i class="fa fa-fw fa-question"></i> How to Order</a></li>
+                    <!--   <li><a href="<?php echo site_url('admin/role'); ?>"><i class="fa fa-fw fa-user"></i> Data Role</a></li> -->
+                    <li><a href="<?php echo site_url('admin/user'); ?>"><i class="fa fa-fw fa-user"></i> Data User</a></li>
+                    <li><a href="<?php echo site_url('admin/pelanggan'); ?>"><i class="fa fa-fw fa-users"></i> Data Pelanggan</a></li>
+                    <li><a href="<?php echo site_url('admin/ac'); ?>"><i class="fa fa-fw fa-tag"></i> Data AC</a></li>
+                    <li><a href="<?php echo site_url('admin/harga'); ?>"><i class="fa fa-fw fa-tag"></i> Data Harga</a></li>
+                    <li><a href="<?php echo site_url('admin/teknisi'); ?>"><i class="fa fa-fw fa-users"></i> Data Teknisi</a></li>
+                    <li><a href="<?php echo site_url('admin/jadwal'); ?>"><i class="fa fa-fw fa-users"></i> Data Jadwal AC</a></li>
                 </ul>
-                <br/>
             </div>
+            <?php } ?> 
+            <?php if($user->role != 4) { ?> 
+            <div class="menu_section">
+                <h3>Transaksi</h3>
+                <ul class="nav side-menu">
+                    <li><a href="<?php echo site_url('admin/reminder'); ?>"><i class="fa fa-fw fa-file"></i>Reminder</a></li>
+                    <li><a href="<?php echo site_url('admin/spk_draft'); ?>"><i class="fa fa-fw fa-file"></i>Draft SPK</a></li>
+                    <li><a href="<?php echo site_url('admin/spk_final'); ?>"><i class="fa fa-fw fa-file"></i> SPK Final</a></li>
+                    <li><a href="<?php echo site_url('admin/pembayaran'); ?>"><i class="fa fa-fw fa-file"></i> Pembayaran</a></li>
+                </ul>
+            </div>
+            <?php } ?> 
+            <?php if($user->role == 4) { ?> 
+            <div class="menu_section">
+                <h3>Transaksi</h3>
+                <ul class="nav side-menu">
+                    <li><a href="<?php echo site_url('admin/spk_final_teknisi'); ?>"><i class="fa fa-fw fa-file"></i> SPK Final</a></li>
+                </ul>
+            </div>
+            <?php } ?> 
+            <?php if($user->role != 4) { ?> 
+            <div class="menu_section">
+                <h3>Laporan</h3>
+                <ul class="nav side-menu">
+                    <li><a href="<?php echo site_url('admin/lap_jadwal'); ?>"><i class="fa fa-fw fa-file"></i> Laporan Jadwal Teknisi</a></li>
+                    <li><a href="<?php echo site_url('admin/lap_penjualan'); ?>"><i class="fa fa-fw fa-file"></i> Laporan Penjualan</a></li>
+                    <li><a href="<?php echo site_url('admin/lap_history'); ?>"><i class="fa fa-fw fa-file"></i> Laporan History AC</a></li>
+                    <li><a href="<?php echo site_url('admin/lap_performa'); ?>"><i class="fa fa-fw fa-file"></i> Laporan Performa Teknisi</a></li>
+                </ul>
+            </div>
+            <?php } ?> 
         </div>
         <!-- /sidebar menu -->
     </div>
